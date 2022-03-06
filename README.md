@@ -43,16 +43,18 @@ npm install
 ### Configure
 
 1) Telegram configuration
-  - [Get a Telegram API key](https://core.telegram.org/api/obtaining_api_id)
-  - Create a Telegram group (e.g. "translator").
-  - [Create a bot](https://core.telegram.org/bots/api) (e.g. "translator_115522_bot"). Configure bot: Allow groups.
-  - Add bot to group. Make bot an administrator.
+    - [Get a Telegram API key](https://core.telegram.org/api/obtaining_api_id)
+    - Create a Telegram group (e.g. "translator").
+    - [Create a bot](https://core.telegram.org/bots/api) (e.g. "translator_115522_bot"). Configure bot: Allow groups.
+    - Add bot to group. Make bot an administrator.
+
 2) Configure Gram.js
-  - This app requires a Gram.js StringSession (so you don't need to login to Telegram with the Gram.js API every time).
-  - Code for getting that can be found [here](https://gram.js.org/) under the *Installation* heading.
-2) Create a .env file and put it in the root of this project. See .env_template for all the values you need.
-2) settings.js configuration
-  - the only settings you should have to change are the source and target languages (currently RU to EN)
+    - This app requires a Gram.js StringSession (so you don't need to login to Telegram with the Gram.js API every time).
+    - Code for getting that can be found [here](https://gram.js.org/) under the *Installation* heading.
+
+3) Create a .env file and put it in the root of this project. See .env_template for all the values you need.
+4) settings.js configuration
+    - the only settings you should have to change are the source and target languages (currently RU to EN)
 
 ### Usage
 
