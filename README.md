@@ -68,6 +68,14 @@ You'll probably have to figure it out on your own.
 
 ## Back matter
 
+### Versions
+
+Currently: 0.1.0
+
+- 0.1.0
+  - Translates from 1 language
+
+
 ### Acknowledgements
 
 - Inspired by [this thread](https://github.com/telegramdesktop/tdesktop/issues/6707).
