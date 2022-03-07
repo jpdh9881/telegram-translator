@@ -16,8 +16,8 @@ const translator = {
     method: "POST",
     url: "https://libretranslate.de/translate",
     data: {
-      // other properties are injected in translate function
-      source: "ru",
+      // q: string
+      // source: language code
       target: "en",
     },
   },

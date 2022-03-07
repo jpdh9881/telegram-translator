@@ -12,16 +12,17 @@ Please let me know if:
 
 How it works:
 
-- you need a Telegram group and a Telegram bot in that group
-- forward the Telegram message(s) you want translated to that group
-- message(s) is registered as a bot update
-- this app polls the bot's updates, gets any new messages, translates them, then uses the bot to send the translated messages back to the group
+- you need a Telegram group(s) and a Telegram bot in that group
+- forward the Telegram messages you want translated to that group
+- message(s) are registered as a bot update
+- this app polls the bot's updates, gets new messages, translates them, then uses the bot to send the translated messages back to the group
 
 ### Features
 
+Can translate from multiple languages.
+
 - Limitations:
-  - only allows translation from 1 language to 1 language (currently: RU to EN)
-  - translation quality is rudimentary
+  - translation quality is rudimentary (uses LibreTranslate)
 
 ### Built with
 
@@ -44,9 +45,11 @@ npm install
 
 1) Telegram configuration
     - [Get a Telegram API key](https://core.telegram.org/api/obtaining_api_id)
-    - Create a Telegram group (e.g. "translator").
-    - [Create a bot](https://core.telegram.org/bots/api) (e.g. "translator_115522_bot"). Configure bot: Allow groups.
-    - Add bot to group. Make bot an administrator.
+    - Create a Telegram group. The name of the group must be in the format "name_$$" where $$ is a language code supported by LibreTranslate.
+      - You can create multiple groups (i.e. a translate_ru group, a translate_uk group)
+    - [Create a bot](https://core.telegram.org/bots/api) (e.g. "translator_115522_bot"). You only need one bot.
+    - Configure the bot to allow groups.
+    - Add bot to your translator groups. Make bot an administrator.
 
 2) Configure Gram.js
     - This app requires a Gram.js StringSession (so you don't need to login to Telegram with the Gram.js API every time).
@@ -54,13 +57,13 @@ npm install
 
 3) Create a .env file and put it in the root of this project. See .env_template for all the values you need.
 4) settings.js configuration
-    - the only settings you should have to change are the source and target languages (currently RU to EN)
+    - the only setting you should have to change is the target language (currently EN)
 
 ### Usage
 
 1) node ./server.js
 2) Forward a Telegram message to your translator group.
-3) The translated message should appear as a message in the group (also refer to Node console)
+3) The translated message should appear as a message in the group
 
 ### Troubleshooting
 
@@ -70,11 +73,12 @@ You'll probably have to figure it out on your own.
 
 ### Versions
 
-Currently: 0.1.0
+Currently: 0.1.1
 
+- 0.1.1
+  - Translates from multiple languages
 - 0.1.0
   - Translates from 1 language
-
 
 ### Acknowledgements
 
@@ -86,11 +90,7 @@ Currently: 0.1.0
 
 ### To-do
 
-- [ ] Multiple language options
-  - Possible solution:
-    - have 1 group for RU translations and 1 group for UK translations
-    - bot belongs to both groups
-    - bot translates based on which group message was sent to
+- [x] Multiple language options
 - [ ] Better translation API
 - [ ] Deploy app somewhere so that it doesn't have to be run locally
 
