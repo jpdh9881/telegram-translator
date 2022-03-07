@@ -1,4 +1,5 @@
 require("dotenv").config();
+const translate = require("@vitalets/google-translate-api");
 
 const longPoller = {
   /**
@@ -12,16 +13,20 @@ const telegram = {
 };
 
 const translator = {
-  query: {
-    method: "POST",
-    url: "https://libretranslate.de/translate",
-    data: {
-      // q: string
-      // source: language code
-      target: "en",
-    },
+  // query: {
+  //   method: "POST",
+  //   url: "https://libretranslate.de/translate",
+  //   data: {
+  //     // q: string
+  //     // source: language code
+  //     target: "en",
+  //   },
+  // },
+  query: null,
+  func(text, from, to = "en") {
+    return translate(text, { from, to });
   },
-  MAX_CHARS_PER_TRANSLATION: 500,
+  MAX_CHARS_PER_TRANSLATION: 5000,
   SPLIT_CHARS: ".@ ",
 };
 

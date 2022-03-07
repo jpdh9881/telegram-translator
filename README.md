@@ -21,14 +21,11 @@ How it works:
 
 Can translate from multiple languages.
 
-- Limitations:
-  - translation quality is rudimentary (uses LibreTranslate)
-
 ### Built with
 
 - Node.js
+  - [Gram.js](https://gram.js.org/)
 - [LibreTranslate](https://github.com/LibreTranslate/LibreTranslate)
-- [Gram.js](https://gram.js.org/)
 
 ## Getting started
 
@@ -73,8 +70,10 @@ You'll probably have to figure it out on your own.
 
 ### Versions
 
-Currently: 0.1.1
+Currently: 0.1.2
 
+- 0.1.2
+  - LibreTranslate API stopped working. Switched to Google Translate alternative
 - 0.1.1
   - Translates from multiple languages
 - 0.1.0
@@ -91,7 +90,7 @@ Currently: 0.1.1
 ### To-do
 
 - [x] Multiple language options
-- [ ] Better translation API
+- [x] Better translation API
 - [ ] Deploy app somewhere so that it doesn't have to be run locally
 
 ### License

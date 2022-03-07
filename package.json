@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@vitalets/google-translate-api": "^8.0.0",
     "axios": "^0.26.0",
     "dotenv": "^16.0.0",
     "input": "^1.0.1",
