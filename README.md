@@ -86,7 +86,7 @@ Currently: 0.1.1
 
 ### See also
 
-- https://twitter.com/kamilkazani/status/1500505674991779842?s=20&t=mJiatWG5Dcn7VT2sjwxy5A !!
+- https://twitter.com/kamilkazani/status/1500505674991779842 !!
 
 ### To-do
 
