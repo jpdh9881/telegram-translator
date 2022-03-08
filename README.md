@@ -20,6 +20,7 @@ How it works:
 ### Features
 
 Can translate from multiple languages.
+[List of supported languages](https://github.com/vitalets/google-translate-api/blob/master/languages.js)
 
 ### Built with
 
@@ -42,8 +43,8 @@ npm install
 
 1) Telegram configuration
     - [Get a Telegram API key](https://core.telegram.org/api/obtaining_api_id)
-    - Create a Telegram group. The name of the group must be in the format "name_$$" where $$ is a language code supported by LibreTranslate.
-      - You can create multiple groups (i.e. a translate_ru group, a translate_uk group)
+    - Create a Telegram group. The name of the group must be in the format "name_$$" where $$ is a (supported language code)[https://github.com/vitalets/google-translate-api/blob/master/languages.js].
+      - You can create multiple groups (i.e. a translate_ru group, a translate_uk group, etc.)
     - [Create a bot](https://core.telegram.org/bots/api) (e.g. "translator_115522_bot"). You only need one bot.
     - Configure the bot to allow groups.
     - Add bot to your translator groups. Make bot an administrator.
@@ -70,8 +71,10 @@ You'll probably have to figure it out on your own.
 
 ### Versions
 
-Currently: 0.1.2
+Currently: 0.1.3
 
+- 0.1.3
+  - fixes bug where language codes were being lowercased, causing issues for Traditional/Simplified Chinese (zh-CN/zh-TW must allow uppercase)
 - 0.1.2
   - LibreTranslate API stopped working. Switched to Google Translate alternative
 - 0.1.1
