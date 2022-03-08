@@ -27,7 +27,8 @@ const translator = {
     return translate(text, { from, to });
   },
   MAX_CHARS_PER_TRANSLATION: 5000,
-  SPLIT_CHARS: ".@ ",
+  SPLIT_CHARS: " @@@ ",
+  SPLIT_CHARS_POST_TRANSLATION: ". @@@ ", // google translate does this for some reason
 };
 
 module.exports = {

@@ -71,8 +71,10 @@ You'll probably have to figure it out on your own.
 
 ### Versions
 
-Currently: 0.1.3
+Currently: 0.1.4
 
+- 0.1.4
+  - channel title is now followed by a new line post translation (fixed the SPLIT_CHARS in settings.js)
 - 0.1.3
   - fixes bug where language codes were being lowercased, causing issues for Traditional/Simplified Chinese (zh-CN/zh-TW must allow uppercase)
 - 0.1.2
